@@ -1,17 +1,12 @@
 import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
-
-import CsvLineChart from "../../component/graph/csv-line-chart";
+import fileCount from '../../data/metrics/FileCount.json'
+import lineCount from '../../data/metrics/LineCount.json'
+import LineChart from "../../component/graph/csv-line-chart";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Top extends React.Component {
     render() {
-        // layout is an array of objects, see the demo for more complete usage
-        const layout = [
-            { i: "a", x: 0, y: 0, w: 1, h: 1, static: true },
-            { i: "b", x: 1, y: 0, w: 1, h: 1, static: true },
-            { i: "c", x: 2, y: 0, w: 1, h: 1, static: true }
-        ];
         return (
             <ResponsiveGridLayout
                 className="layout"
@@ -23,13 +18,10 @@ class Top extends React.Component {
                 autoSize={false}
             >
                 <div key="a">
-                    <CsvLineChart values={[0]} labels={[""]} title="LineCount" />
+                    <LineChart title={fileCount.title} labels={fileCount.labels} valueSet={fileCount.valueSet} />
                 </div>
                 <div key="b">
-                    <CsvLineChart values={[0]} labels={[""]} title="LineCount" />
-                </div>
-                <div key="c">
-                    <CsvLineChart values={[0]} labels={[""]} title="LineCount" />
+                    <LineChart title={lineCount.title} labels={lineCount.labels} valueSet={lineCount.valueSet} />
                 </div>
             </ResponsiveGridLayout>
         );
