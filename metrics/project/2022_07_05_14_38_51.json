@@ -4,25 +4,25 @@
       "graphGroup": "LineCount",
       "valueGroup": "Normal",
       "value": 8609.0,
-      "createdAt": "2022-07-05T14:04:35.7477787"
+      "createdAt": "2022-07-05T14:04:35"
     },
     {
       "graphGroup": "LineCount",
       "valueGroup": "AutoGen",
       "value": 25539.0,
-      "createdAt": "2022-07-05T14:04:35.7477787"
+      "createdAt": "2022-07-05T14:04:35"
     },
     {
       "graphGroup": "FileCount",
       "valueGroup": "Normal",
       "value": 226.0,
-      "createdAt": "2022-07-05T14:04:35.7477787"
+      "createdAt": "2022-07-05T14:04:35"
     },
     {
       "graphGroup": "FileCount",
       "valueGroup": "AutoGen",
       "value": 272.0,
-      "createdAt": "2022-07-05T14:04:35.7477787"
+      "createdAt": "2022-07-05T14:04:35"
     }
   ]
 }
