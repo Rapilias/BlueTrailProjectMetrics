@@ -1,9 +1,9 @@
 import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
-import fileCount from '../../data/metrics/FileCount.json'
-import lineCount from '../../data/metrics/LineCount.json'
 import LineChart from "../../component/graph/csv-line-chart";
 const ResponsiveGridLayout = WidthProvider(Responsive);
+import fileCount from "../../data/metrics/LineCount.json";
+import lineCount from "../../data/metrics/LineCount.json";
 
 class Top extends React.Component {
     render() {
