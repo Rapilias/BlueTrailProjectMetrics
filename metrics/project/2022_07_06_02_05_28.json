@@ -8,7 +8,7 @@
     },
     {
       "graphGroup": "LineCount",
-      "valueGroup": "AutoGen",
+      "valueGroup": "WithAutoGen",
       "value": 25585.0,
       "createdAt": "2022-07-06T02:05:17"
     },
@@ -20,7 +20,7 @@
     },
     {
       "graphGroup": "FileCount",
-      "valueGroup": "AutoGen",
+      "valueGroup": "WithAutoGen",
       "value": 273.0,
       "createdAt": "2022-07-06T02:05:17"
     }
