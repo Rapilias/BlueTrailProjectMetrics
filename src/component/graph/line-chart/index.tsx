@@ -5,6 +5,7 @@ import {
     PointElement,
     LineElement,
     Title,
+    Filler,
     Tooltip,
     Legend,
     ChartOptions,
@@ -43,7 +44,8 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    Filler,
 );
 ChartJS.defaults.color = 'rgb(224,224,224)';
 
@@ -61,12 +63,12 @@ const options: ChartOptions = {
 };
 const LineChart = (props: IProps) => {
     const { title, labels, valueSet } = props;
-    console.log(props);
     const data = {
         labels,
         datasets: valueSet.map((m, index) => {
             return Object.assign({
                 pointHitRadius: 5,
+                fill: true,
                 label: m.label,
                 data: m.values,
                 color: 'rgb(224,224,224)',
