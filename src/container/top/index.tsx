@@ -2,7 +2,7 @@ import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import fileCount from '../../data/metrics/FileCount.json'
 import lineCount from '../../data/metrics/LineCount.json'
-import LineChart from "../../component/graph/csv-line-chart";
+import LineChart from "../../component/graph/line-chart";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Top extends React.Component {

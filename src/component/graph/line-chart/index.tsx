@@ -61,7 +61,7 @@ const options: ChartOptions = {
         },
     },
 };
-const CsvLineChart = (props: IProps) => {
+const LineChart = (props: IProps) => {
     const { title, labels, valueSet } = props;
     const data = {
         labels,
@@ -69,7 +69,7 @@ const CsvLineChart = (props: IProps) => {
             return Object.assign({
                 pointHitRadius: 5,
                 label: m.label,
-                data: m.values,
+                data: m.values.map(m => Math.floor(m)),
                 color: 'rgb(224,224,224)',
             },
                 colorPattern[index]);
@@ -81,4 +81,4 @@ const CsvLineChart = (props: IProps) => {
     return <Line options={overwriteOption} data={data} />
 }
 
-export default CsvLineChart;
+export default LineChart;

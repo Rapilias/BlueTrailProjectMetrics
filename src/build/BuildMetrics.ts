@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { IProps } from "../component/graph/csv-line-chart";
+import { IProps } from "../component/graph/line-chart";
 import { ProjectMetricsData, ProjectAllMetrics } from "../schema/ProjectMetrics";
 import groupBy from "../utility/GroupBy";
 
