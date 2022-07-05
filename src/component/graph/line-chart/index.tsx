@@ -56,20 +56,19 @@ const options: ChartOptions = {
         title: {
             color: 'rgb(224,224,224)',
             display: true,
-            text: 'LineCount',
-
         },
     },
 };
 const LineChart = (props: IProps) => {
     const { title, labels, valueSet } = props;
+    console.log(props);
     const data = {
         labels,
         datasets: valueSet.map((m, index) => {
             return Object.assign({
                 pointHitRadius: 5,
                 label: m.label,
-                data: m.values.map(m => Math.floor(m)),
+                data: m.values,
                 color: 'rgb(224,224,224)',
             },
                 colorPattern[index]);
