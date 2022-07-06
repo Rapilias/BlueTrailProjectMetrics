@@ -5,6 +5,8 @@
   "homepage": "https://rapilias.github.io/BlueTrailProjectMetrics",
   "dependencies": {
     "chart.js": "^3.8.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "moment": "^2.29.3",
     "react": "^18.2.0",
     "react-chartjs-2": "^4.2.0",
     "react-dom": "^18.2.0",
