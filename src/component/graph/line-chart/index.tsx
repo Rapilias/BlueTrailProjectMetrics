@@ -9,9 +9,12 @@ import {
     Tooltip,
     Legend,
     ChartOptions,
+    TimeScale,
+    TimeSeriesScale,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import merge from 'ts-deepmerge';
+import 'chartjs-adapter-moment';
 
 export interface IValueSet {
     label: string;
@@ -42,6 +45,8 @@ ChartJS.register(
     LinearScale,
     PointElement,
     LineElement,
+    TimeScale,
+    TimeSeriesScale,
     Title,
     Tooltip,
     Legend,
@@ -49,7 +54,7 @@ ChartJS.register(
 );
 ChartJS.defaults.color = 'rgb(224,224,224)';
 
-const options: ChartOptions = {
+const options: ChartOptions<"line"> = {
     responsive: true,
     plugins: {
         legend: {
@@ -60,6 +65,20 @@ const options: ChartOptions = {
             display: true,
         },
     },
+    scales: {
+        x: {
+            type: "time",
+            time: {
+                unit: 'day',
+                minUnit: 'day',
+                stepSize: 1,
+                displayFormats: {
+                    'hour': "MM/DD HH",
+                    'day': "MM/DD",
+                }
+            },
+        }
+    }
 };
 const LineChart = (props: IProps) => {
     const { title, labels, valueSet } = props;
@@ -76,7 +95,7 @@ const LineChart = (props: IProps) => {
                 colorPattern[index]);
         })
     };
-    const additionalOption: ChartOptions = { plugins: { title: { text: title } } };
+    const additionalOption: ChartOptions<"line"> = { plugins: { title: { text: title } } };
     const overwriteOption = merge(options, additionalOption) as ChartOptions;
 
     return <Line options={overwriteOption} data={data} />
