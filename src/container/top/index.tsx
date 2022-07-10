@@ -2,6 +2,7 @@ import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import fileCount from '../../data/metrics/FileCount.json'
 import lineCount from '../../data/metrics/LineCount.json'
+import typeCount from '../../data/metrics/TypeCount(WithoutAutoGen).json'
 import LineChart from "../../component/graph/line-chart";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -22,6 +23,9 @@ class Top extends React.Component {
                 </div>
                 <div key="b">
                     <LineChart title={lineCount.title} labels={lineCount.labels} valueSet={lineCount.valueSet} />
+                </div>
+                <div key="c">
+                    <LineChart title={typeCount.title} labels={typeCount.labels} valueSet={typeCount.valueSet} />
                 </div>
             </ResponsiveGridLayout>
         );

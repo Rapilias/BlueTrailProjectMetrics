@@ -38,6 +38,10 @@ const colorPattern = [
     {
         borderColor: 'rgb(88, 235, 92)',
         backgroundColor: 'rgba(88, 235, 92, 0.5)',
+    },
+    {
+        borderColor: 'rgb(192, 192, 32)',
+        backgroundColor: 'rgba(192, 192, 32, 0.5)',
     }
 ]
 ChartJS.register(
