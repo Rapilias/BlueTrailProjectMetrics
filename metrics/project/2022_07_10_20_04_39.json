@@ -1,0 +1,28 @@
+{
+  "datas": [
+    {
+      "graphGroup": "LineCount",
+      "valueGroup": "Normal",
+      "value": 9200.0,
+      "createdAt": "2022-07-10T20:04:25"
+    },
+    {
+      "graphGroup": "LineCount",
+      "valueGroup": "WithAutoGen",
+      "value": 26141.0,
+      "createdAt": "2022-07-10T20:04:25"
+    },
+    {
+      "graphGroup": "FileCount",
+      "valueGroup": "Normal",
+      "value": 242.0,
+      "createdAt": "2022-07-10T20:04:25"
+    },
+    {
+      "graphGroup": "FileCount",
+      "valueGroup": "WithAutoGen",
+      "value": 288.0,
+      "createdAt": "2022-07-10T20:04:25"
+    }
+  ]
+}
