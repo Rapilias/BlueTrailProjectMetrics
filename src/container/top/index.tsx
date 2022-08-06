@@ -4,10 +4,13 @@ import fileCount from '../../data/metrics/FileCount.json'
 import lineCount from '../../data/metrics/LineCount.json'
 import typeCount from '../../data/metrics/TypeCount(WithoutAutoGen).json'
 import LineChart from "../../component/graph/line-chart";
+import { isBrowser, isMobile } from 'react-device-detect';
+
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Top extends React.Component {
     render() {
+        console.log(isMobile);
         return (
             <ResponsiveGridLayout
                 className="layout"
@@ -15,7 +18,7 @@ class Top extends React.Component {
                 cols={{ lg: 3, md: 2, sm: 1, }}
                 rowHeight={300}
                 maxRows={3}
-                isDraggable={true}
+                isDraggable={isMobile === false}
                 autoSize={false}
             >
                 <div key="a">
