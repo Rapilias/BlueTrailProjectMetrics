@@ -10,6 +10,7 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Top extends React.Component {
     render() {
+        console.log(isMobile);
         return (
             <ResponsiveGridLayout
                 className="layout"
