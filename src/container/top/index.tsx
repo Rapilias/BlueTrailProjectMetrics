@@ -4,7 +4,7 @@ import fileCount from '../../data/metrics/FileCount.json'
 import lineCount from '../../data/metrics/LineCount.json'
 import typeCount from '../../data/metrics/TypeCount(WithoutAutoGen).json'
 import LineChart from "../../component/graph/line-chart";
-import { isBrowser, isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
