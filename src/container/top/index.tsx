@@ -14,11 +14,11 @@ class Top extends React.Component {
         return (
             <ResponsiveGridLayout
                 className="layout"
-                breakpoints={{ lg: 1200, md: 800, sm: 400, }}
-                cols={{ lg: 3, md: 2, sm: 1, }}
+                breakpoints={{ sm: 1, }}
+                cols={{ sm: 1, }}
                 rowHeight={300}
                 maxRows={3}
-                isDraggable={isMobile === false}
+                isDraggable={false}
                 autoSize={false}
             >
                 <div key="a">
