@@ -60,7 +60,6 @@ ChartJS.defaults.color = 'rgb(224,224,224)';
 
 const options: ChartOptions<"line"> = {
     responsive: true,
-    maintainAspectRatio: false,
     plugins: {
         legend: {
             position: 'bottom' as const,
