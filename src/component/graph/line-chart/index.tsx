@@ -15,7 +15,6 @@ import {
 import { Line } from 'react-chartjs-2';
 import merge from 'ts-deepmerge';
 import 'chartjs-adapter-moment';
-import styled from "styled-components";
 
 export interface IValueSet {
     label: string;
@@ -86,7 +85,7 @@ const options: ChartOptions<"line"> = {
         }
     }
 };
-const LineChartComponent = (props: IProps) => {
+const LineChart = (props: IProps) => {
     const { title, labels, valueSet } = props;
     const data = {
         labels,
@@ -106,11 +105,5 @@ const LineChartComponent = (props: IProps) => {
 
     return <Line options={overwriteOption} data={data} />
 }
-
-
-const LineChart = styled(LineChartComponent)`
-  height: 30%;
-`;
-
 
 export default LineChart;
