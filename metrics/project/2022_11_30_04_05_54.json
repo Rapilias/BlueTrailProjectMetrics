@@ -1,0 +1,52 @@
+{
+  "datas": [
+    {
+      "graphGroup": "LineCount",
+      "valueGroup": "Normal",
+      "value": 28087.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "LineCount",
+      "valueGroup": "WithAutoGen",
+      "value": 50632.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "FileCount",
+      "valueGroup": "Normal",
+      "value": 613.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "FileCount",
+      "valueGroup": "WithAutoGen",
+      "value": 671.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "TypeCount(WithoutAutoGen)",
+      "valueGroup": "Class",
+      "value": 544.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "TypeCount(WithoutAutoGen)",
+      "valueGroup": "Struct",
+      "value": 3.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "TypeCount(WithoutAutoGen)",
+      "valueGroup": "Interface",
+      "value": 119.0,
+      "createdAt": "2022-11-30T04:05:36"
+    },
+    {
+      "graphGroup": "TypeCount(WithoutAutoGen)",
+      "valueGroup": "enum",
+      "value": 64.0,
+      "createdAt": "2022-11-30T04:05:36"
+    }
+  ]
+}
