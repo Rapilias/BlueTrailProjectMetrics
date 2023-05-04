@@ -75,7 +75,6 @@ const options: ChartOptions<"line"> = {
             time: {
                 unit: 'day',
                 minUnit: 'day',
-                stepSize: 1,
                 displayFormats: {
                     'hour': "MM/DD HH",
                     'day': "MM/DD",
