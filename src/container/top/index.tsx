@@ -18,7 +18,7 @@ class Top extends React.Component {
                 cols={{ lg: 3, md: 2, sm: 1, }}
                 rowHeight={300}
                 maxRows={3}
-                isDraggable={isMobile === false}
+                isDraggable={false}
                 autoSize={false}
             >
                 <div key="a">
