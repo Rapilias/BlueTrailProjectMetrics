@@ -15,6 +15,7 @@ import {
 import { Line } from 'react-chartjs-2';
 import merge from 'ts-deepmerge';
 import 'chartjs-adapter-moment';
+import zoomPlugin from 'chartjs-plugin-zoom';
 
 export interface IValueSet {
     label: string;
@@ -55,11 +56,20 @@ ChartJS.register(
     Tooltip,
     Legend,
     Filler,
+    zoomPlugin,
 );
 ChartJS.defaults.color = 'rgb(224,224,224)';
 
 const options: ChartOptions<"line"> = {
     responsive: true,
+    transitions: {
+        zoom: {
+            animation: {
+                duration: 500,
+                easing: 'easeOutCubic'
+            }
+        }
+    },
     plugins: {
         legend: {
             position: 'bottom' as const,
@@ -68,6 +78,21 @@ const options: ChartOptions<"line"> = {
             color: 'rgb(224,224,224)',
             display: true,
         },
+        zoom: {
+            pan: {
+                enabled: true,
+                mode: 'xy',
+            },
+            zoom: {
+                wheel: {
+                    enabled: true,
+                },
+                pinch: {
+                    enabled: true
+                },
+                mode: 'xy',
+            }
+        }
     },
     scales: {
         x: {
