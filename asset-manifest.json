@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/BlueTrailProjectMetrics/static/css/main.517c4d4a.css",
-    "main.js": "/BlueTrailProjectMetrics/static/js/main.1dbf5e1f.js",
+    "main.js": "/BlueTrailProjectMetrics/static/js/main.187401a1.js",
     "static/js/496.9eacaad8.chunk.js": "/BlueTrailProjectMetrics/static/js/496.9eacaad8.chunk.js",
     "index.html": "/BlueTrailProjectMetrics/index.html",
     "main.517c4d4a.css.map": "/BlueTrailProjectMetrics/static/css/main.517c4d4a.css.map",
-    "main.1dbf5e1f.js.map": "/BlueTrailProjectMetrics/static/js/main.1dbf5e1f.js.map",
+    "main.187401a1.js.map": "/BlueTrailProjectMetrics/static/js/main.187401a1.js.map",
     "496.9eacaad8.chunk.js.map": "/BlueTrailProjectMetrics/static/js/496.9eacaad8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.517c4d4a.css",
-    "static/js/main.1dbf5e1f.js"
+    "static/js/main.187401a1.js"
   ]
 }
