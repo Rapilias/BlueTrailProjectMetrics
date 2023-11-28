@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { IProps } from "../component/graph/line-chart";
-import { ProjectMetricsData, ProjectAllMetrics } from "../schema/ProjectMetrics";
+import { ProjectAllMetrics } from "../schema/ProjectMetrics";
 import groupBy from "../utility/GroupBy";
 
 var metricsDirectory = "metrics/project/";
@@ -14,6 +14,7 @@ const ReadDirectory = (directory: string): ProjectAllMetrics => {
     if (files === undefined || files.length === 0)
         throw new Error("Directory Not Found. --> " + directory);
 
+    const set = new Set<Date>();
     // files is string[] but, foreach item is file index...
     for (const fileIndex in files) {
         const filePath = path.join(metricsDirectory, files[fileIndex]);
@@ -21,6 +22,9 @@ const ReadDirectory = (directory: string): ProjectAllMetrics => {
             continue;
         const file = fs.readFileSync(filePath);
         const datas = JSON.parse(file.toString()) as ProjectAllMetrics;
+        if(set.has(datas.datas[0].createdAt))
+            continue;
+        set.add(datas.datas[0].createdAt);
         for (const data of datas.datas) {
             allMetrics.datas.push(data);
         }
@@ -28,7 +32,7 @@ const ReadDirectory = (directory: string): ProjectAllMetrics => {
     return allMetrics;
 };
 const WriteGroupedMetrics = (allMetrics: ProjectAllMetrics) => {
-    const graphGroupedMetrics = groupBy(allMetrics.datas, m => m.graphGroup)
+    const graphGroupedMetrics = groupBy(allMetrics.datas, m => m.graphGroup);
     for (const graphKey in graphGroupedMetrics) {
         const renderDataSet: IProps = {
             title: graphKey,
@@ -45,6 +49,7 @@ const WriteGroupedMetrics = (allMetrics: ProjectAllMetrics) => {
                 values: valueGroup.map(m => m.value),
             });
         }
+        console.log(`${renderDataSet.labels.length}, ${renderDataSet.valueSet[0].values.length}`);
         fs.writeFileSync(`src/data/metrics/${graphKey}.json`, JSON.stringify(renderDataSet));
     }
 };
